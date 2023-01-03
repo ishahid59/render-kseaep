@@ -46,9 +46,13 @@ const routes: Routes = [
 //   }
 // ];
 
+
+// 2022 to avoid # set "useHash: false" but browser refresh will return 404 after deploymwnt.
+// Solution: In render deployment under "Redirects/Rewrites" for the service set "Rewrite" rule. Source: "/*", Destination: "/index.html"
+// https://render.com/docs/redirects-rewrites
 @NgModule({
   // imports: [RouterModule.forRoot(routes)], // Default is hash:false. Refresh wont work in deployment
-  imports: [RouterModule.forRoot(routes, { useHash: true })], //https://stackoverflow.com/questions/65828232/how-can-i-prevent-404-not-found-error-in-angular-when-i-refresh-page
+  imports: [RouterModule.forRoot(routes, { useHash: false })], //https://stackoverflow.com/questions/65828232/how-can-i-prevent-404-not-found-error-in-angular-when-i-refresh-page
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
