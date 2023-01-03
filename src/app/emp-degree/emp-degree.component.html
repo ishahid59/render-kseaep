@@ -1,0 +1,32 @@
+  <!-- Datatable -->
+  <!-- =================================================================================================== -->
+  <table  id="dt" datatable [dtOptions]="dtOptions" class="row-border hover table table-bordered table-striped"
+    style="border:1px solid #bbbbbb; width: 100%; ">
+    <thead class="" style="border:1px solid red">
+      <tr class="bg-primary">
+        <!-- <th scope="col">id</th> -->
+        <th scope="col">empid</th>
+        <th scope="col">str1</th>
+        <th scope="col" style="text-align: center;">Action</th>
+      </tr>
+    </thead>
+    <tbody style="border:10px solid #c4c4c4 !important">
+      <tr *ngFor="let item of empDegreeData">
+        <!-- <td>{{item.id}}</td> -->
+        <td>{{item.empid}}</td>
+        <td>{{item.str1}}</td>
+
+         <td style="text-align: center;">
+          <!-- <a routerLink="/Empdetail/{{item.empid}}">View</a> |
+          <a (click)="showEmpEditModal(item)" id="test" data-toggle="modal" data-target="#empeditmodal" class=""
+            style="cursor: pointer;">Edit</a> |
+          <a (click)="deleteEmp(item)" id="test" class="" style="cursor: pointer;">Delete</a> -->
+
+          <a routerLink="">View</a> |
+          <a routerLink="">Edit</a> |
+          <a routerLink="">Delete</a>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
